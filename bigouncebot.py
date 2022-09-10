@@ -1,5 +1,9 @@
 import os
 import discord
+from dotenv import load_dotenv
+
+#token = os.get_env("token")
+token = os.environ.get("TOKEN")
 
 class bigOunce(discord.Client):
     async def on_ready(self):
@@ -11,6 +15,9 @@ class bigOunce(discord.Client):
         
         if message.author == client.user:
             return
+
+        if message.author == "<@228347925183332352>":
+            await message.channel.send("Gay")
 
         if("<@228347925183332352>" in message.content):
             for number in range(5):
@@ -24,4 +31,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = bigOunce(intents=intents)
-client.run("NzQyMTY0MjQyNzU2Nzk2NTc3.GyMPJq.vwF8lKCcSo2vvfkQznWwxTFaikw7SQbM_Kz72c")
+client.run(token)
