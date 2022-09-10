@@ -1,8 +1,5 @@
 import os
 import discord
-from dotenv import load_dotenv
-
-token = os.get_env("token")
 
 class bigOunce(discord.Client):
     async def on_ready(self):
@@ -27,4 +24,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = bigOunce(intents=intents)
-client.run(token)
+client.run("NzQyMTY0MjQyNzU2Nzk2NTc3.GyMPJq.vwF8lKCcSo2vvfkQznWwxTFaikw7SQbM_Kz72c")
