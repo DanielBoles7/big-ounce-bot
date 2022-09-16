@@ -30,9 +30,9 @@ class bigOunce(discord.Client):
         if("/tagluke" in message.content):
             tagnumstring = ''.join(filter(str.isdigit, message.content))
             if(tagnumstring == ''):
-                tagnum == 1
+                tagnum = 1
             else:
-                tagnum == int(tagnumstring)
+                tagnum = int(tagnumstring)
             if(tagnum < 1):
                 tagnum = 1
             if(tagnum > 10):
