@@ -27,6 +27,19 @@ class bigOunce(discord.Client):
             for number in range(5):
                 await message.channel.send('<@732432789949120542>')
 
+        if("/tagluke" in message.content):
+            tagnumstring = ''.join(filter(str.isdigit, message.content))
+            if(tagnumstring == ''):
+                tagnum == 1
+            else:
+                tagnum == int(tagnumstring)
+            if(tagnum < 1):
+                tagnum = 1
+            if(tagnum > 10):
+                tagnum = 10
+            for number in range(tagnum):
+                await message.channel.send('<@340318963428884490>')
+
 intents = discord.Intents.default()
 intents.message_content = True
 
