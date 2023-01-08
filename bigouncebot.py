@@ -17,7 +17,7 @@ class bigOunce(discord.Client):
             return
 
         if message.author == "<@228347925183332352>":
-            await message.channel.send("<@228347925183332352>")
+            await message.channel.send("Bot")
 
         if("<@228347925183332352>" in message.content):
             for number in range(5):
